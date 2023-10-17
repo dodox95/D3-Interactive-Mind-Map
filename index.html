@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosta Mapa Myśli z D3.js</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .node circle {
+            fill: #0074d9;
+            stroke: #0047ab;
+            stroke-width: 2px;
+            cursor: pointer; /* Umożliwia zaznaczanie węzłów */
+        }
+
+        .node text {
+            font-size: 14px;
+        }
+
+        .link {
+            fill: none;
+        }
+
+        .zoom-btns {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .zoom-btn {
+            margin: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Moja Mapa Myśli</h2>
+    <form id="addNodeForm">
+        <label for="nodeName">Nazwa węzła:</label>
+        <input type="text" id="nodeName" name="nodeName">
+        <button type="submit">Dodaj węzeł</button>
+    </form>
+    <div class="zoom-btns">
+        <button class="zoom-btn" id="zoom_in">+</button>
+        <button class="zoom-btn" id="zoom_out">-</button>
+    </div>
+    <!-- Skrypty -->
+    <script src="node_modules/d3/dist/d3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
